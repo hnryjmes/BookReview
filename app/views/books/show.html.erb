@@ -3,35 +3,49 @@
     <%= image_tag @book.book_img.url(:book_show), class: "book-show" %>
   </div>
   <div class="col-md-8">
-    <h2><%= @book.title %></h2>
-    <h3><%= @book.author %></h3>
-    <p><%= @book.description %></p>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-4">
-    <!-- Where the reviews/ratings will go -->
-    <%= render @book.reviews %>
-
-    <div>
-      <%= link_to "Add Review", new_book_review_path(@book) %>
+    <div class="book-info">
+      <h2 class="book-title"><%= @book.title %></h2>
+      <h3 class="book-author"><span>by </span><%= @book.author %></h3>
+      <p class="book-desc"><%= @book.description %></p>
+      <h4 class="avg-rating">Average Rating: <%= @average_review %> / 5 </h4>
+      <p class="number-of-reviews">(<%= @book.reviews.count %> reviews)</p>
     </div>
   </div>
 </div>
 
-<%= link_to "Home", root_path %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="reviews">
 
-<% if user_signed_in? %>
+      <!-- Where the reviews/ratings will go -->
+      <h1>Reviews</h1>
+      <%= render @book.reviews %>
 
-  <% if @book.user_id == current_user.id %>
+      <div>
+        <%= link_to "Add Review", new_book_review_path(@book), class: "btn btn-custom" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <%= link_to "Edit", edit_book_path(@book) %>
-    <%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?" } %>
+<div class="links btn-group2">
+
+
+  <%= link_to "Home", root_path, class: "btn btn-custom" %>
+
+  <% if user_signed_in? %>
+
+    <% if @book.user_id == current_user.id %>
+
+      <%= link_to "Edit", edit_book_path(@book), class: "btn btn-custom" %>
+      <%= link_to "Delete", book_path(@book), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
+
+    <% end %>
 
   <% end %>
 
-<% end %>
+</div>
+
 
 <script>
   $('.review-rating').raty({
