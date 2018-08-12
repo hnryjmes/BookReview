@@ -49,7 +49,6 @@ class BooksController < ApplicationController
     redirect_to root_path
   end
 
-
   private
   def book_params
       params.require(:book).permit(:title, :description, :author, :category_id, :book_img)
