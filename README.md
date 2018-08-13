@@ -1,4 +1,4 @@
-![screen shot](/BookReview/final_screenshot.png "Screen Shot")
+![screen shot](https://github.com/hnryjmes/BookReview/blob/master/final_screenshot.png "Screen Shot")
 
 
 # README
