@@ -3,7 +3,7 @@
 
 # README
 
-This was a tutorial project I built, designed by Ryan Hemrick >> https://github.com/RyanHemrick/Book-Review
+This was a tutorial project I built, designed by Ryan Hemrick (https://github.com/RyanHemrick/Book-Review)
 
 I learned to use:
 
