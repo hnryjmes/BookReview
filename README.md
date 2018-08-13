@@ -3,25 +3,16 @@
 
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was a tutorial project I built, designed by Ryan Hemrick >> https://github.com/RyanHemrick/Book-Review
 
-Things you may want to cover:
+I learned to use:
 
-* Ruby version
+* Ruby on Rails
 
-* System dependencies
+* Git and GitHub
 
-* Configuration
+* Heroku
 
-* Database creation
+* various gems
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+thanks for looking!
