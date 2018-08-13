@@ -27,7 +27,11 @@ class BooksController < ApplicationController
 
   def create
     @book = current_user.books.build(book_params)
-    @book.category_id = params[:category_id]
+    if params[:category_id] != nil
+      @book.category_id = params[:category_id]
+    else
+      @book.category_id = 7
+    end
 
     if @book.save
       redirect_to root_path
